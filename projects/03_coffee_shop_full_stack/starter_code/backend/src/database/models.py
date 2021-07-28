@@ -95,8 +95,13 @@ class Drink(db.Model):
     '''
 
     def insert(self):
-        db.session.add(self)
-        db.session.commit()
+        try:
+            db.session.add(self)
+            db.session.commit()
+        except:
+            db.session.rollback()       #added try , except
+        finally:
+            db.session.close()
 
     '''
     delete()
