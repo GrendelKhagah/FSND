@@ -22,12 +22,14 @@ db_drop_and_create_all()
     returns status code 200 and json {"success": True, "drinks": drinks} where drinks is the list of drinks
         or appropriate status code indicating reason for failure
 '''
-@app.route('/')
+@app.route('/drinks')
 def index():
-    drinks = Drink.query.order_by(Drink.id.desc())
+    #drinks = Drink.query.order_by(Drink.id.desc())
 
-
-    return render_template('pages/home.html', new_artists=new_data, hot_artists=hot_data)
+    return jsonify({
+        "success": True
+        #"drinks": drinks
+    }), 200
 
 
 '''
@@ -77,10 +79,6 @@ def index():
 
 
 # Error Handling
-'''
-Example error handling for unprocessable entity
-'''
-
 
 @app.errorhandler(422)
 def unprocessable(error):
@@ -91,24 +89,21 @@ def unprocessable(error):
     }), 422
 
 
-'''
-@TODO implement error handlers using the @app.errorhandler(error) decorator
-    each error handler should return (with approprate messages):
-             jsonify({
-                    "success": False,
-                    "error": 404,
-                    "message": "resource not found"
-                    }), 404
-
-'''
-
-'''
-@TODO implement error handler for 404
-    error handler should conform to general task above
-'''
 
 
-'''
-@TODO implement error handler for AuthError
-    error handler should conform to general task above
-'''
+@app.errorhandler(404)
+def notfound(error):
+    return jsonify({
+        "success": False,
+        "error": 404,
+        "message": "Not Found"
+    }), 404
+
+
+@app.errorhandler(403)
+def AuthError(error):
+    return jsonify({
+        "success": False,
+        "error": 403,
+        "message": "Authentication Error"
+    }), 403
