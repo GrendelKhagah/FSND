@@ -7,7 +7,7 @@ from urllib.request import urlopen
 
 AUTH0_DOMAIN = 'docmon.us.auth0.com'
 ALGORITHMS = ['RS256']
-API_AUDIENCE = 'CoffeAPI'  #yes its Coffe Not Coffee
+API_AUDIENCE = 'CoffeAPI'  # yes its Coffe Not Coffee
 
 ## AuthError Exception
 class AuthError(Exception):
@@ -112,7 +112,7 @@ def verify_decode_jwt(token):
                 'description': 'Unable to find the appropriate key.'
             }, 400)
 
-#was done already...
+# Twas done already...
 def requires_auth(permission=''):
     def requires_auth_decorator(f):
         @wraps(f)
