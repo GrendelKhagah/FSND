@@ -16,8 +16,10 @@ db_drop_and_create_all()
 ###############################################################################
 #####                   Routes                                            #####
 ###############################################################################
+# loging route: https://docmon.us.auth0.com/authorize?audience=CoffeeShare&response_type=token&client_id=VsohXIsBviOmycBwOOtWRrwID4D9yKBE&redirect_uri=http://localhost:8080/login-results
+# tocket: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InBjSnByXzljSmdudS16aW5PdHh2WSJ9.eyJpc3MiOiJodHRwczovL2RvY21vbi51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTQxMTkxNDE2NzQ0Nzk3MTkyOTMiLCJhdWQiOiJDb2ZmZWVTaGFyZSIsImlhdCI6MTYyNzg2NzkzMiwiZXhwIjoxNjI3ODc1MTMyLCJhenAiOiJWc29oWElzQnZpT215Y0J3T090V1Jyd0lENEQ5eUtCRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOltdfQ.L-6RwV3WUYgYIwLLJk4YttP_KtZtWXW1TowIDQWfNLI91tbHSLjSuPI2EJALFBLiZG8ilHX8qwNlvMDQMXj6PVp-5IuX-hhN5zKek2e6BKRyhbZQJC_JSODNw69CH6jjarL_8WgSBER7QL5M_Q6R63eRIdpDtLJajzoQaKj6L1Tw7xaKwsrfX4HAUDo9lglbQ6e1pgHBWiC-9LVHAMYWSRGKRW9Wp017hJsNVZnz0CJ8H5kTnfdIkblNqe96zslaZ9DGMDhm6qBgcBKp5KBf7CuWFI7DLtDvTx1ekUmK2zklJ9h-UafqvYrDHmToxvCGbwEvJwztYbPdFcnEbL58Vw
 
-
+#token 2 : eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InBjSnByXzljSmdudS16aW5PdHh2WSJ9.eyJpc3MiOiJodHRwczovL2RvY21vbi51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTQ0MTA4MTUzMjM5Nzc1MjgzNDQiLCJhdWQiOiJDb2ZmZWVTaGFyZSIsImlhdCI6MTYyNzg2OTEzNiwiZXhwIjoxNjI3ODc2MzM2LCJhenAiOiJWc29oWElzQnZpT215Y0J3T090V1Jyd0lENEQ5eUtCRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOltdfQ.UPqOZCfgT_eY2IZL3CoKtAdip5qYo9IgKWJPglqiML2gTi-kWZAFznpyVli-M9HW42p2h65ZffB9CIwhg3tresnOrq6-AWcHH-opYCxEsQP2ciyalJyIv49e2Xf0GY4k83CiC5NZG8ki-eqNTSifY6zv3BZddD2gDIxXjHqTq1AVcE1uDMGn3HAUSa23YS78YpkV3LB45A2c1sfOIToaeu9s5bAWL78wiliJkF1cMRu1ZP6SysId6eRSJL-2Q2X433QDwuEyx9K57x6DfksXAx2VAPTHrsXYcnLRmXouTewWxfQPvJ6yBJGfS8MhH-Xv_JBsQfln-XlCVrdjAsl-kg
 @app.route('/')
 @app.route('/drinks')
 def index():
