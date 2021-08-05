@@ -7,7 +7,7 @@ from urllib.request import urlopen
 
 AUTH0_DOMAIN = 'docmon.us.auth0.com'
 ALGORITHMS = ['RS256']
-API_AUDIENCE = 'CoffeAPI'  # yes its Coffe Not Coffee
+API_AUDIENCE = 'CoffeeShare'
 
 ## AuthError Exception
 class AuthError(Exception):

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Taylor\desktop\UdacityClass\CoffeeShop\1\FSND\projects\03_coffee_shop_full_stack\starter_code\backend\src\env"
+VIRTUAL_ENV="C:\Users\Taylor\Desktop\UdacityClass\CoffeeShop\1\FSND\projects\03_coffee_shop_full_stack\starter_code\backend\src\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
